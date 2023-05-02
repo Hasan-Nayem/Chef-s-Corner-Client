@@ -30,3 +30,16 @@
     border-radius: 8px;
     margin: 0 -155px;
 }
+.chef-container{
+    margin: 130px 0;
+}
+
+.chef-container h1{
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 53px;
+    color: #131313;
+    border-right: 5px solid#f93f23;
+    width: 20%;
+    margin: 0 auto;
+}
