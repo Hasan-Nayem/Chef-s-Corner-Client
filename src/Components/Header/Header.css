@@ -1,6 +1,8 @@
 .header{
-    height: 100vh;
     color: black;
+}
+.nav-link{
+    color: #f93f23 !important;
 }
 /* .button{
     border: none;
@@ -24,15 +26,27 @@
     margin: 0 auto;
 }
 .branding-title{
-    font-weight: 600;
     font-size: 64px;
-    line-height: 100px;
+    line-height: 90px;
     color: #131313;
+    font-weight: 800;
 }
 .branding-details{
-    font-weight: 400;
     font-size: 16px;
     line-height: 26px;
     text-align: center;
     color: #727272;
+    margin-bottom: 35px;
+}
+.explore-btn{
+    border: none;
+    padding: 15px 30px; 
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    background-color: #f93f23;
+}
+.branding img{
+    border-radius: 8px;
+    margin: 0 -155px;
 }

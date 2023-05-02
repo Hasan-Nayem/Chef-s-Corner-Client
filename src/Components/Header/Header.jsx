@@ -22,14 +22,16 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-            <div className="branding">
+            <div className="branding text-center">
                 <div>
-                    <h1 className='text-center branding-title'>Try Our Popular Arabian Cuisine!!!</h1>
+                    <h1 className='text-center branding-title fw-5'><b>Try Our Popular Arabian Cuisine!!!</b></h1>
                 </div>
                 <div>
                     <p className="text-center branding-details">
                     There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even
                     </p>
+                    <button className='explore-btn mb-5'>Explore Now</button>
+                    <img src="https://i.ibb.co/1M3sVyq/arabian-cuisine.jpg" alt="" />
                 </div>
             </div>
         </div>
