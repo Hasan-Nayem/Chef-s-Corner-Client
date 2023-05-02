@@ -13,7 +13,7 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto">
                         <a className="nav-link" aria-current="page" href="#">Home</a>
-                        <a className="nav-link" href="#">Features</a>
+                        <a className="nav-link" href="#">Blog</a>
                         <a className="nav-link" href="#">Pricing</a>
                         <a className="nav-link" href="#">Login</a>
                         <a className="nav-link" href="#">Registration</a>
@@ -22,18 +22,6 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-            <div className="branding text-center">
-                <div>
-                    <h1 className='text-center branding-title fw-5'><b>Try Our Popular Arabian Cuisine!!!</b></h1>
-                </div>
-                <div>
-                    <p className="text-center branding-details">
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even
-                    </p>
-                    <button className='explore-btn mb-5'>Explore Now</button>
-                    <img src="https://i.ibb.co/1M3sVyq/arabian-cuisine.jpg" alt="" />
-                </div>
-            </div>
         </div>
     );
 };
