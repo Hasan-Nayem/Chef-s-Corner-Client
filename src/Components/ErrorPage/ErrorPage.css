@@ -1,0 +1,13 @@
+.error-container{
+    margin-top: 5rem;
+}
+.error-container .title{
+    border-right: 5px solid #f93f23;;
+    border-left: 5px solid #f93f23;;
+}
+.explore-btn{
+    text-decoration: none;
+}
+.explore-btn:hover{
+    color: #fff;
+}
