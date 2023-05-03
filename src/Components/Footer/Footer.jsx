@@ -38,7 +38,7 @@ const Footer = () => {
 
                 <p className="text-wrap p-2 fs-5">Subscribe for our latest & Articles. We Won't Give You Spam Mails</p>
                 <input type="text" className="form-control p-3 my-2" placeholder="Email Address" />
-                <button className="background-color text-white p-3 rounded w-100 border-0">Send <i class="fas fa-paper-plane"></i> </button>
+                <button className="background-color text-white p-3 rounded w-100 border-0">Send <i className="fas fa-paper-plane"></i> </button>
             </div>
 
             </div>

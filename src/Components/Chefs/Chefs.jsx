@@ -1,15 +1,21 @@
 import React from 'react';
 import './Chefs.css';
+import { Link } from 'react-router-dom';
 
-const Chefs = () => {
+const Chefs = (props) => {
+    const {id,name,img,yearsOfExperience,likes} = props.chef;
     return (
-        
-        <div class="col">
-            <div class="card">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <div className="col">
+            <div className="card">
+            <img src={img} style={{height:"400px"}} className="card-img-top" alt="..." />
+            <div className="card-body">
+                <h5 className="card-title">{name}</h5>
+                <div className="d-flex justify-content-between align-items-center">
+                    <div className="info">Years of experience:  {yearsOfExperience}</div>
+                    <div className="info">Numbers of recipes: {props.chef.recipes.length}</div>
+                    <div className="info"> <img src="https://i.ibb.co/7NqPNJy/thumbs.png" style={{width:"30px"}} alt="" /> {likes}</div>
+                </div>
+                <Link to={`/chef/${id}`} className="btn btn-primary mt-3" style={{backgroundColor:"#f93f23" , borderColor:"#f93f23"}}>View Recipes</Link>
             </div>
             </div>
         </div>

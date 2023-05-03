@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
     return (
-        <div class="container error-container">
+        <div className="container error-container">
             <div className="text-center border p-5">
                 <h1 className='fw-bolder title'>Lost in Space !!</h1>
                 <img src="https://i.ibb.co/J3WsKM0/505-error.png" alt="" />

@@ -31,10 +31,10 @@ const Registration = () => {
                     <label htmlFor="password">Confirm Your Authentication Password</label>
                     <input type="password" className="form-control" name="confirm-password" id="confirm-password" required/>
                 </div>
-                <div onClick={handleStatus} class="col-12 my-2">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck" />
-                    <label class="form-check-label" for="gridCheck">
+                <div onClick={handleStatus} className="col-12 my-2">
+                    <div className="form-check">
+                        <input className="form-check-input" type="checkbox" id="gridCheck" />
+                    <label className="form-check-label" for="gridCheck">
                         Terms & Condition
                     </label>
                     </div>

@@ -2,12 +2,14 @@ import React from 'react';
 import "./Home.css";
 import { useRef } from 'react';
 import Chefs from '../Chefs/Chefs';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
     const ref = useRef(null);
     const handleClick = () => {
         ref.current?.scrollIntoView({behavior: 'smooth'});
     }
+    const allChefs = useLoaderData();
     return (
         <>
             <div className="branding text-center">
@@ -26,13 +28,13 @@ const Home = () => {
             <section className="chef-container" ref={ref}>
                 <h1 className="text-center">Our Chef's</h1>
                 <div className="container my-5">
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <Chefs></Chefs>    
-                    <Chefs></Chefs>    
-                    <Chefs></Chefs>    
-                    <Chefs></Chefs>    
-                    <Chefs></Chefs>    
-                    <Chefs></Chefs>    
+                <div className="row row-cols-1 row-cols-md-2 g-4">
+                    {
+                        allChefs.map(chef => <Chefs
+                        key={chef.id}
+                        chef={chef}
+                        ></Chefs> )
+                    }   
                 </div>
                 </div>
             </section>
