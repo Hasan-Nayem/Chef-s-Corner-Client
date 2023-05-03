@@ -9,18 +9,27 @@ import {
 import './index.css'
 import Main from './Components/Main/Main.jsx';
 import Home from './Components/Home/Home.jsx';
+import Login from './Components/Login/Login.jsx';
+import Registration from './Components/Registration/Registration.jsx';
+import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement : <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element : <Home></Home>,
       },
       {
-        
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/registration",
+        element: <Registration></Registration>,
       }
     ],
   },
