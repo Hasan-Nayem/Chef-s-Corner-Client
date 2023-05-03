@@ -39,11 +39,27 @@ const Registration = () => {
                     </label>
                     </div>
                 </div>
+                <p className='text-center'>OR</p>
+                <hr />                
                 <div className="form-group my-3">
                     {
                         status? 
+                        <>
+                            <div className="d-flex justify-content-around mb-3">
+                                <button className="signInbtn">Register With Google</button>
+                                <button className="signInbtn">Register With GitHub</button>
+                            </div>
                             <button type="submit" className='explore-btn form-control'>Register</button>
-                        :   <button type="submit" className='explore-btn form-control' disabled>Register</button>
+                        </>
+                            
+                        :   
+                        <>
+                            <div className="d-flex justify-content-around mb-3">
+                                <button className="signInbtn" disabled>Register With Google</button>
+                                <button className="signInbtn" disabled>Register With GitHub</button>
+                            </div>
+                            <button type="submit" className='explore-btn form-control' disabled>Register</button>
+                        </>
                     }
                 </div>
                 <div className="form-group my-2">

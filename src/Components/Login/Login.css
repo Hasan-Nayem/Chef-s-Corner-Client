@@ -3,3 +3,11 @@
     margin-top: 10rem;
     margin-bottom: 20rem;
 }
+.signInbtn{
+    border: none;
+    background-color: #fffdfc;
+    padding: 20px 35px;
+    font-size: 18px;
+    border: 1px solid #f93f23;
+    border-radius: 8px;
+}
