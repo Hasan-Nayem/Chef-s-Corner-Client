@@ -7,7 +7,6 @@ import Loader from '../Loader/Loader';
 
 const Main = () => {
     const navigation = useNavigation();
-    console.log(navigation.state)
     return (
         <div className='main-container'>
             <Header></Header>

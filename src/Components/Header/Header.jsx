@@ -1,19 +1,21 @@
 import React, { useContext } from 'react';
 import './Header.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigation } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useNavigate } from "react-router-dom";
 import ActiveLink from '../ActiveLink/ActiveLink';
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
+
+
 
 const Header = () => {
     const {user,logout} = useContext(AuthContext);
+    const navigation = useNavigation();
     const navigate = useNavigate();
-
-    console.log(user);
     const handleLogout = () => {
         logout()
         .then(() => {
-            console.log('User logged out');
             navigate('/');
         })
         .catch((e) => {
@@ -34,13 +36,25 @@ const Header = () => {
                     <div className="navbar-nav ms-auto">
                         <ActiveLink  aria-current="page" to="/">Home</ActiveLink>
                         <Link className="nav-link" to="#">Blog</Link>
+                        
+                        
                         {
                             user?
-                                
                                 user.photoURL?
-                                <img className="user-img mx-2" style={{width:"50px",height:"50px",borderRadius:"50px"}} src={user.photoURL} alt="" />
+                                <>
+                                    <a href="#" className="react-tooltip"><img className="user-img mx-2 " style={{width:"50px",height:"50px",borderRadius:"50px"}} src={user.photoURL} alt="" /></a>
+                                    <Tooltip anchorSelect=".react-tooltip" place="bottom">
+                                        {user.displayName}
+                                    </Tooltip> 
+                                </>
                                 :
-                                <img className="user-img mx-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYWFXbd9hr7VcMQ63aguH1t5IEg3L2JdFoej8P7l4&s" alt="" />
+                                <>
+                                    <a href="#" className="react-tooltip"><img className="user-img mx-2 " style={{width:"50px",height:"50px",borderRadius:"50px"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYWFXbd9hr7VcMQ63aguH1t5IEg3L2JdFoej8P7l4&s" alt="" /></a>
+                                    <Tooltip anchorSelect=".react-tooltip" place="bottom">
+                                        {user.displayName}
+                                    </Tooltip>
+                                </>
+                                
                             :
                             <>
                                 <ActiveLink to="/login">Login</ActiveLink>
@@ -49,7 +63,11 @@ const Header = () => {
                         } 
                         {
                             user&& <button onClick={handleLogout} className="explore-btn">Logout</button>
-                        }  
+                        } 
+                        {/* <Tooltip anchorSelect=".react-tooltip" place="bottom">
+                            {navigation.state === 'loading' && user.displayName}
+                        </Tooltip>  */}
+                        
                     </div>
                     </div>
                 </div>

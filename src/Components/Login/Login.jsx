@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useNavigate, useLocation } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
@@ -21,14 +23,14 @@ const Login = () => {
         login(email, password)
         .then((result) => {
             form.reset();
-            console.log(result.user);
             navigate(from, {replace : true});
         }).catch((err) => {
-            console.log(err);
+            toast.error("Invalid Email or Password");
         })
     }
     return (
         <div className="form-container container">
+            <ToastContainer />
             <form onSubmit={handleLogin} className="form-control">
                 <div className="form-group text-center">
                     <img src="https://i.ibb.co/PQWTxH6/User.png" className="w-25" alt="" />
