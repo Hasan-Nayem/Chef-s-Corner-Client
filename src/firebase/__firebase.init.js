@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBlFsNaMklruNZtcZt6vJd2TjkOHrEiVE4",
-  authDomain: "phero-assignment-10.firebaseapp.com",
-  projectId: "phero-assignment-10",
-  storageBucket: "phero-assignment-10.appspot.com",
-  messagingSenderId: "874608979668",
-  appId: "1:874608979668:web:70ebd27fd5565a7893d541"
+  apiKey: import.meta.env.FIREBASE_API_KEY,
+  authDomain: import.meta.env.FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.FIREBASE_APP_ID
 };
 
 // Initialize Firebase

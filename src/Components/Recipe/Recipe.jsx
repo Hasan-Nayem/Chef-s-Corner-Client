@@ -5,7 +5,6 @@ import RecipeDetails from '../RecipeDetails/RecipeDetails';
 
 const Recipe = () => {
     const {id,name,img,bio,yearsOfExperience,likes,recipes} = useLoaderData();
-    console.log(name);
     return (
         <div className="container my-4 p-4 border">
             <div className="text-center">

@@ -19,16 +19,16 @@ const Login = () => {
                 <div className="form-group my-3">
                     <button type="submit" className='explore-btn form-control'>Login</button>
                 </div>
-                <p className='text-center'>OR</p>
-                <hr />
-                <div className="d-flex justify-content-around">
-                    <button className="signInbtn">Sign In With Google</button>
-                    <button className="signInbtn">Sign In With GitHub</button>
-                </div>
-                <div className="form-group my-2">
-                    <p className="">Not Registered Yet? <Link to="/registration">Register Here</Link> </p>
-                </div>
             </form>
+            <p className='text-center my-3'>OR</p>
+            <hr />
+            <div className="d-flex justify-content-around">
+                <button className="signInbtn">Sign In With Google</button>
+                <button className="signInbtn">Sign In With GitHub</button>
+            </div>
+            <div className="form-group my-2">
+                <p className="">Not Registered Yet? <Link to="/registration">Register Here</Link> </p>
+            </div>
         </div>
     );
 };
