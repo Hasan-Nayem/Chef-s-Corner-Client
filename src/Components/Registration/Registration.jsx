@@ -45,24 +45,24 @@ const Registration = () => {
             toast.error(error.message);
         })
     }
-    // const googleSignUp = () => {
-    //     signInWithGoogle()
-    //     .then(result =>{
-    //         navigate('/');
-    //     })
-    //     .catch(err =>{
-    //         console.log("Error signing google - " , err.message);
-    //     })
-    // }
-    // const githubSignUp = () => {
-    //     signInWithGithub()
-    //     .then(result =>{
-    //         navigate('/');
-    //     })
-    //     .catch(err =>{
-    //         console.log("Error signing github - " , err.message);
-    //     })
-    // }
+    const googleSignUp = () => {
+        signInWithGoogle()
+        .then(result =>{
+            navigate('/');
+        })
+        .catch(err =>{
+            console.log("Error signing google - " , err.message);
+        })
+    }
+    const githubSignUp = () => {
+        signInWithGithub()
+        .then(result =>{
+            navigate('/');
+        })
+        .catch(err =>{
+            console.log("Error signing github - " , err.message);
+        })
+    }
     return (
         <div className="form-container container">
             <ToastContainer />
@@ -113,8 +113,8 @@ const Registration = () => {
                     status? 
                     <>
                         <div className="d-flex justify-content-around mb-3">
-                            <button  className="signInbtn">Register With Google</button>
-                            <button  className="signInbtn">Register With GitHub</button>
+                            <button onClick={googleSignUp} className="signInbtn">Register With Google</button>
+                            <button onClick={githubSignUp} className="signInbtn">Register With GitHub</button>
                         </div>
                     </>
                         
