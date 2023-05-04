@@ -1,39 +1,78 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Registration.css'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { updateProfile } from 'firebase/auth';
 
 const Registration = () => {
     const [status, SetStatus] = useState(false);
-    const handleStatus = () => SetStatus(!status)
+    const {register} = useContext(AuthContext);
+    const handleStatus = () => SetStatus(!status);
+    const handleReg = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const img = form.img.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const confirm_password = form.confirm_password.value;
+        if(password != confirm_password){
+            return toast.error("Password and Confirm Password must be the same");
+        } 
+        if(password.length < 6){  
+            return toast.error("Password must be at least 6 characters");
+        }
+        register(email, password)
+        .then(result =>{
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            form.reset();
+            updateProfile(loggedUser, {
+                displayName: name,
+                photoURL : img
+            }).then(() =>{
+                console.log("Profile updated successfully");
+            }).catch(err =>{
+                console.log("Error updating profile");
+            })
+
+        })
+        .catch(error =>{
+            toast.error(error.message);
+        })
+    }
     return (
         <div className="form-container container">
-            <form className="form-control">
+            <ToastContainer />
+            <form onSubmit={handleReg} className="form-control">
                 <div className="form-group text-center">
                     <img src="https://i.ibb.co/PQWTxH6/User.png" className="w-25" alt="" />
                 </div>
                 <div className="form-group my-2">
                     <label htmlFor="name">Your Full Name</label>
-                    <input type="text" className="form-control" name="name" id="name" required/>
+                    <input type="text" className="form-control" name="name"  />
                 </div>
                 <div className="form-group my-2">
                     <label htmlFor="img">Image URL</label>
-                    <input type="text" className="form-control" name="img" id="img" required/>
+                    <input type="text" className="form-control" name="img"  />
                 </div>
                 <div className="form-group my-2">
                     <label htmlFor="email">Your Email</label>
-                    <input type="email" className="form-control" name="email" id="email" required/>
+                    <input type="email" className="form-control" name="email"  required/>
                 </div>
                 <div className="form-group my-2">
                     <label htmlFor="password">Your Authentication Password</label>
-                    <input type="password" className="form-control" name="password" id="password" required/>
+                    <input type="password" className="form-control" name="password"  required/>
                 </div>
                 <div className="form-group my-2">
                     <label htmlFor="password">Confirm Your Authentication Password</label>
-                    <input type="password" className="form-control" name="confirm-password" id="confirm-password" required/>
+                    <input type="password" className="form-control" name="confirm_password" required/>
                 </div>
-                <div onClick={handleStatus} className="col-12 my-2">
+                <div className="col-12 my-2">
                     <div className="form-check">
-                        <input className="form-check-input" type="checkbox" id="gridCheck" />
+                        <input onClick={handleStatus} className="form-check-input" type="checkbox" id="gridCheck" />
                     <label className="form-check-label" htmlFor="gridCheck">
                         Terms & Condition
                     </label>
