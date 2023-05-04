@@ -3,6 +3,7 @@ import './Header.css'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useNavigate } from "react-router-dom";
+import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Header = () => {
     const {user,logout} = useContext(AuthContext);
@@ -31,7 +32,7 @@ const Header = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto">
-                        <Link className="nav-link" aria-current="page" to="/">Home</Link>
+                        <ActiveLink  aria-current="page" to="/">Home</ActiveLink>
                         <Link className="nav-link" to="#">Blog</Link>
                         {
                             user?
@@ -42,8 +43,8 @@ const Header = () => {
                                 <img className="user-img mx-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYWFXbd9hr7VcMQ63aguH1t5IEg3L2JdFoej8P7l4&s" alt="" />
                             :
                             <>
-                                <Link className="nav-link" to="/login">Login</Link>
-                                <Link className="nav-link" to="/registration">Registration</Link>
+                                <ActiveLink to="/login">Login</ActiveLink>
+                                <ActiveLink to="/registration">Registration</ActiveLink>
                             </>
                         } 
                         {
