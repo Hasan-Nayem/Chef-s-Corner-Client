@@ -15,6 +15,8 @@ import Recipe from './Components/Recipe/Recipe';
 import AuthProvider from './providers/AuthProvider';
 import PrivateRoutes from './routes/PrivateRoutes';
 import Loader from './Components/Loader/Loader';
+import Blog from './Components/Blog/Blog';
+import PDF from './Components/PDF/PDF';
 
 const router = createBrowserRouter([
   {
@@ -40,8 +42,12 @@ const router = createBrowserRouter([
         element: <PrivateRoutes> <Recipe></Recipe> </PrivateRoutes>,
       },
       {
-        path: '/loader',
-        element: <Loader></Loader>,
+        path: '/blog',
+        element: <Blog></Blog>,
+      },
+      {
+        path: '/pdf',
+        element: <PDF></PDF>,
       }
     ],
     errorElement : <ErrorPage></ErrorPage>,

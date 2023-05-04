@@ -26,14 +26,16 @@
     font-size: 20px;
     background-color: #f93f23;
 }
-.branding img{
+.img-section img{
+    width: 45rem;
     border-radius: 8px;
-    margin: 0 -155px;
 }
 .chef-container{
     margin: 130px 0;
 }
-
+.carousel{
+    width: 400px;
+}
 .chef-container h1{
     font-weight: 900;
     font-size: 64px;

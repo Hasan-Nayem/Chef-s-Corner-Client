@@ -35,8 +35,7 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto">
                         <ActiveLink  aria-current="page" to="/">Home</ActiveLink>
-                        <Link className="nav-link" to="#">Blog</Link>
-                        
+                        <ActiveLink to="/blog">Blog</ActiveLink>                        
                         
                         {
                             user?
