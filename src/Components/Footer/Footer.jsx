@@ -1,6 +1,5 @@
 import React from 'react';
 import "./Footer.css";
-import logo from '../../../public/logo_main.png'
 
 const Footer = () => {
     return (
@@ -8,7 +7,7 @@ const Footer = () => {
         <div className="container">
             <div className="row">
             <div className="col-md-3 col-sm-12 p-5">
-                <img src={logo} className="p-3" style={{width:"180px"}} alt="" />
+                <img src="https://i.ibb.co/q7XRLNX/logo-main.png" className="p-3" style={{width:"180px"}} alt="" />
                 <p className="text-wrap text-white p-3 fs-5">There are many variations of
                 passages of Lorem Ipsum
                 available, but the majority have

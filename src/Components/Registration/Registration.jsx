@@ -36,6 +36,7 @@ const Registration = () => {
                 photoURL : img
             }).then(() =>{
                 console.log("Profile updated successfully");
+                navigate('/');
             }).catch(err =>{
                 console.log("Error updating profile");
             })
