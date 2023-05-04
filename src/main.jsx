@@ -44,7 +44,7 @@ const router = createBrowserRouter([
         element: <Loader></Loader>,
       }
     ],
-    // errorElement : <ErrorPage></ErrorPage>,
+    errorElement : <ErrorPage></ErrorPage>,
   },
 ]);
 

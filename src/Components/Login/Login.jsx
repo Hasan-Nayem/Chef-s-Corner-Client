@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
-    const {login} = useContext(AuthContext);
+    const {login,signInWithGoogle,signInWithGithub} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
@@ -26,6 +26,24 @@ const Login = () => {
             navigate(from, {replace : true});
         }).catch((err) => {
             toast.error("Invalid Email or Password");
+        })
+    }
+    const googleSignUp = () => {
+        signInWithGoogle()
+        .then(result =>{
+            navigate(from, {replace : true});
+        })
+        .catch(err =>{
+            console.log("Error signing google - " , err.message);
+        })
+    }
+    const githubSignUp = () => {
+        signInWithGithub()
+        .then(result =>{
+            navigate(from, {replace : true});
+        })
+        .catch(err =>{
+            console.log("Error signing github - " , err.message);
         })
     }
     return (
@@ -50,8 +68,8 @@ const Login = () => {
             <p className='text-center my-3'>OR</p>
             <hr />
             <div className="d-flex justify-content-around">
-                <button className="signInbtn">Sign In With Google</button>
-                <button className="signInbtn">Sign In With GitHub</button>
+                <button onClick={googleSignUp} className="signInbtn">Sign In With Google</button>
+                <button onClick={githubSignUp} className="signInbtn">Sign In With GitHub</button>
             </div>
             <div className="form-group my-2">
                 <p className="">Not Registered Yet? <Link to="/registration">Register Here</Link> </p>

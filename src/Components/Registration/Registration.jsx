@@ -5,10 +5,12 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { updateProfile } from 'firebase/auth';
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Registration = () => {
     const [status, SetStatus] = useState(false);
-    const {register} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const {register,signInWithGoogle,signInWithGithub} = useContext(AuthContext);
     const handleStatus = () => SetStatus(!status);
     const handleReg = (event) => {
         event.preventDefault();
@@ -43,6 +45,24 @@ const Registration = () => {
             toast.error(error.message);
         })
     }
+    // const googleSignUp = () => {
+    //     signInWithGoogle()
+    //     .then(result =>{
+    //         navigate('/');
+    //     })
+    //     .catch(err =>{
+    //         console.log("Error signing google - " , err.message);
+    //     })
+    // }
+    // const githubSignUp = () => {
+    //     signInWithGithub()
+    //     .then(result =>{
+    //         navigate('/');
+    //     })
+    //     .catch(err =>{
+    //         console.log("Error signing github - " , err.message);
+    //     })
+    // }
     return (
         <div className="form-container container">
             <ToastContainer />
@@ -93,8 +113,8 @@ const Registration = () => {
                     status? 
                     <>
                         <div className="d-flex justify-content-around mb-3">
-                            <button className="signInbtn">Register With Google</button>
-                            <button className="signInbtn">Register With GitHub</button>
+                            <button  className="signInbtn">Register With Google</button>
+                            <button  className="signInbtn">Register With GitHub</button>
                         </div>
                     </>
                         
