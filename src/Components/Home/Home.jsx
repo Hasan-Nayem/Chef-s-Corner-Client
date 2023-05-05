@@ -32,13 +32,13 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="my-5 container d-flex align-items-center justify-content-around g-2">
-                <div className="">
+            <div className="information-container my-5 container d-flex align-items-center justify-content-around g-2">
+                <div className="info-container">
                     <h3 className="text-center">Information's About Arabian Cuisine</h3>
                     <p className="text-muted">Arabian cuisine is the cuisine of the Arabs, defined as the various regional cuisines spanning the Arab world, from the Maghreb to the Fertile Crescent and the Arabian Peninsula 1. It is centuries old and reflects the culture of trading in baharat (spices), herbs, and foods 1.
                     Some popular dishes include Mansaf, which is a traditional dish in Arabic countries such as Palestine and Jordan made with lamb, yoghurt and rice 2, Baharat, which is a spice mix usually of 7 or 8 spices such as nutmeg, cardamom, coriander, paprika, black pepper, cinnamon, cumin, and cloves 3, Kabsa, which is a mixed rice dish that originates from Saudi Arabia 2, Hummus, which is a dip made from cooked chickpeas blended with tahini, olive oil, lemon juice, salt and garlic 2, and Tabbouleh, which is a vegetarian salad made mostly of finely chopped parsley with tomatoes, mint, onion, bulgur wheat and seasoned with olive oil and lemon juice 2.</p>
                 </div>
-                <div className="">
+                <div className="carousel-container">
                 <Carousel className="" activeIndex={index} onSelect={handleSelect}>
                     <Carousel.Item>
                         <img
@@ -83,7 +83,7 @@ const Home = () => {
 
             
                 
-            <div className="container d-flex g-1 justify-content-between align-items-center my-5">
+            <div className="history-section container d-flex g-1 justify-content-between align-items-center my-5">
                 <div className="description">
                     <h3 className="text-center my-3">History of <span style={{color:"#f93f23", borderBottom:"4px solid #f93f23"}}>Arabian Cuisine</span></h3>
                     <p className="text-center text-muted">Arab cuisine is centuries old and reflects the culture of trading in baharat (spices), herbs, and foods. The regions have many similarities but also unique traditions. The history of Arab food goes back to the ancient civilizations of the Middle East. The Sumerians, Babylonians, Phoenicians or Canaanites, Hittites, Arameans, Assyrians, Egyptians, and Nabateans all contributed to the formation of the Arab kitchen.

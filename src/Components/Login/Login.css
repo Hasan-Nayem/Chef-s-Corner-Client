@@ -11,3 +11,18 @@
     border: 1px solid #f93f23;
     border-radius: 8px;
 }
+
+@media screen and (max-width: 576px){
+    .form-container{
+        width: 20rem !important;
+    }
+    .signInbtn{
+        border: none;
+        background-color: #fffdfc;
+        padding: 0px 35px;
+        font-size: 14px;
+        border: 1px solid #f93f23;
+        border-radius: 8px;
+        margin: 5px;
+    }
+}

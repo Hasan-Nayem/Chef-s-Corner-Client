@@ -5,7 +5,7 @@ import { PDFDownloadLink } from '@react-pdf/renderer';
 
 const Blog = () => {
     return (
-        <>
+        <div className="container">
             <h1 className="title">Question and Answers</h1>
             <div className="container main-content text-start">
                 <h4>1. difference between uncontrolled and controlled components - </h4>
@@ -36,7 +36,7 @@ const Blog = () => {
                 </PDFDownloadLink>
                
             </div>
-        </>
+        </div>
     );
 };
 

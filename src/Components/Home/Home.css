@@ -45,3 +45,63 @@
     width: 20%;
     margin: 0 auto;
 }
+@media screen and (max-width: 576px){
+    .branding {
+        margin-top: 2rem;
+    }
+    .branding div{
+        width: 75%;
+        margin: 0 auto;
+    }
+    .branding h1{
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 25px;
+    }   
+    .branding p{
+        font-size: 14px;
+    }
+    .branding button{
+
+    }
+    .information-container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-container{
+        margin-top: 20px;
+        width: 75%;
+    }
+    .carousel-container{
+
+    }
+    .history-section{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+    }
+    .description{
+
+    }
+    .img-section img{
+        width: 20rem;
+        border-radius: 8px;
+    }
+    .chef-container{
+        margin: 50px 0;
+    }
+    .chef-container h1{
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 53px;
+        color: #131313;
+        border-right: 5px solid#f93f23;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+}

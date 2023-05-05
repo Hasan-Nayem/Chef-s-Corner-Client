@@ -3,12 +3,11 @@
     font-size: 32px;
     line-height: 44px;
     color: #1A1919;
-    position: absolute;
-    top: 120px;
-    left: 42%;
+    text-align: center;
+    margin-top: 25px;
 }
 .main-content{
-    margin-top: 130px;
+    margin-top: 40px;
 }
 .download-btn{  
     border: none;
@@ -17,4 +16,25 @@
     color: white;
     font-size: 20px;
     background-color: #f93f23;
+}
+@media screen and (max-width: 576px){
+    .title{
+        margin-top: 25px;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 44px;
+        color: #1A1919;
+        text-align: center;
+    }
+    .main-content{
+        margin-top: 25px;
+    }
+    .download-btn{  
+        border: none;
+        padding: 15px 55px;
+        border-radius: 8px;
+        color: white;
+        font-size: 1rem;
+        background-color: #f93f23;
+    }
 }

@@ -10,10 +10,12 @@ const Main = () => {
     return (
         <div className='main-container'>
             <Header></Header>
-            {
+            {/* {
                 navigation.state === "loading" && <Loader />
+            } */}
+            {
+                navigation.state === "loading" ? <Loader /> : <Outlet></Outlet>
             }
-            <Outlet></Outlet>
             <Footer></Footer>               
         </div>
     );
