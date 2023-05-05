@@ -61,9 +61,6 @@
     .branding p{
         font-size: 14px;
     }
-    .branding button{
-
-    }
     .information-container{
         display: flex;
         flex-direction: column-reverse;
@@ -72,20 +69,19 @@
     }
     .info-container{
         margin-top: 20px;
-        width: 75%;
     }
-    .carousel-container{
-
+    .carousel-element{
+        width: 340px;
+        margin: 0 auto;
     }
     .history-section{
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        width: 75%;
     }
-    .description{
-
+    .history-section h3{
+        font-size: 20px;
     }
     .img-section img{
         width: 20rem;

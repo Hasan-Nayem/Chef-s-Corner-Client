@@ -39,7 +39,7 @@ const Home = () => {
                     Some popular dishes include Mansaf, which is a traditional dish in Arabic countries such as Palestine and Jordan made with lamb, yoghurt and rice 2, Baharat, which is a spice mix usually of 7 or 8 spices such as nutmeg, cardamom, coriander, paprika, black pepper, cinnamon, cumin, and cloves 3, Kabsa, which is a mixed rice dish that originates from Saudi Arabia 2, Hummus, which is a dip made from cooked chickpeas blended with tahini, olive oil, lemon juice, salt and garlic 2, and Tabbouleh, which is a vegetarian salad made mostly of finely chopped parsley with tomatoes, mint, onion, bulgur wheat and seasoned with olive oil and lemon juice 2.</p>
                 </div>
                 <div className="carousel-container">
-                <Carousel className="" activeIndex={index} onSelect={handleSelect}>
+                <Carousel className="carousel-element" activeIndex={index} onSelect={handleSelect}>
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
